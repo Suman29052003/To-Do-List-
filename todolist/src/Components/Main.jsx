@@ -13,6 +13,11 @@ const Main = () => {
     setTodo("");
     setTime("");
   }
+  function remove(index) {
+    const updatedData = [...data];
+    updatedData.splice(index, 1);
+    setData(updatedData);
+  }
 
   return (
     <div className="main">
@@ -43,7 +48,13 @@ const Main = () => {
       </div>
       {data.map((element, index) => {
         return (
-          <Header slno={index + 1} todo={element.todo} time={element.time} />
+          <Header
+            key={index}
+            slno={index}
+            todo={element.todo}
+            time={element.time}
+            remove={remove}
+          />
         );
       })}
     </div>

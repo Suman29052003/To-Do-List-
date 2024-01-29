@@ -1,12 +1,19 @@
-.navbar{
-  background-color: #9b9b9b!important;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.main{
+.navbar {
+  background-color: #9b9b9b !important;
+  font-weight: 700;
+}
+
+.main {
   width: 100%;
 }
 
-.inputs{
+.inputs {
   width: 90%;
   display: flex;
   justify-content: center;
@@ -15,16 +22,47 @@
   gap: 20px;
 }
 
-.inputs input{
+.inputs input {
   width: 20%;
 }
 
-.container{
+.container {
   margin-top: 10px;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
-  padding:10px;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   text-align: center;
+}
+
+.container h6{
+  font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+  /* CSS rules for screens with a width of 800px or less */
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .inputs input {
+    width: 90vw;
+  }
+
+  .container {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    text-align: center;
+    gap: 20px;
+  }
+}
+
+.spanRed {
+  color: red;
 }
